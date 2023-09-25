@@ -26,7 +26,7 @@ export const Header: FC = () => {
     [transparent]
   );
   return (
-    <header className="flex items-center justify-between w-full sticky top-0 left-0 z-40">
+    <header className="flex items-center justify-between w-full sticky top-0 left-0 z-40 overflow-hidden">
       <nav
         className={
           "flex items-center justify-between  w-full  py-[41px] border-transparent border-b-[0.5] " +
@@ -34,7 +34,7 @@ export const Header: FC = () => {
         }
       >
         <Container className="flex items-center justify-between gap-2 ">
-          <MainLogo />
+          <MainLogo className="max-md:w-[141px] max-md:h-[31px] max-w-[50%]" />
           <div className="hidden items-center gap-3 max-xl:flex">
             <HamburgerMenu />
             <Btn className="py-[15px] px-[23px] h-[35px] text-sm">

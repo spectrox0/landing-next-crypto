@@ -9,16 +9,16 @@ export const Banner: FC = () => {
   return (
     <Container className="relative z-10">
       <div className="relative overflow-hidden pt-[120px] h-full mb-10 rounded-[15px] flex flex-col">
-        <div className="bg-box w-full overflow-visible rounded-[inherit] h-full flex-1 flex gap-2">
+        <div className="bg-box w-full overflow-visible rounded-[inherit] h-full flex-1 flex gap-2 max-md:flex-col-reverse">
           <Image
             alt="/"
-            className="select-none -mt-[241px] -mr-[100px] -translate-x-1/4 translate-y-1/4 max-w-full object-contain bottom-0 left-0 rounded-tl-[20px]"
+            className="select-none max-md:-mt-[130px] -mt-[241px] -mr-[100px] -translate-x-1/4 translate-y-1/4 max-w-full object-contain bottom-0 left-0 rounded-tl-[20px]"
             width={362}
             draggable={false}
             height={339}
             src="/assets/cube.png"
           />
-          <div className="pb-[40px] pt-[30px] pl-[10px] pr-[45px] flex flex-col gap-4">
+          <div className="pb-[40px] pt-[30px] pl-[10px] pr-[45px] max-md:pl-[45px] flex flex-col gap-4">
             <CTABtn className="self-end">More Details</CTABtn>
             <TitlePhase title={"Open Beta"} number={"01"} />
             <p className="text-white text-base font-normal ">
