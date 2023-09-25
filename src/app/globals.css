@@ -6,6 +6,59 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --background-app: #17191e;
+  --gray: #b0bbce;
+
+  /* linear gradient of #FF0420 to #BD2738 */
+  --linear-gradient-1: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    ),
+    linear-gradient(180deg, #ff0420 0%, #bd2738 100%);
+  --gradient-backdrop: linear-gradient(
+    0deg,
+    #232731 0%,
+    rgba(35.03, 38.98, 48.87, 0) 63%
+  );
+  --gradient-app: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 58.85%
+  );
+  --gradient-backdrop-2: linear-gradient(
+    0deg,
+    var(--background-app) 0%,
+    #17191e00 63%
+  );
+  --primary-color: #bd2738;
+  --secondary-color: #ff0420;
+  --hamburger-menu-color: #23262f;
+  --box-color: #232731;
+  --bg-1: #1b1e26;
+
+  --linear-gradient-2: linear-gradient(
+    180deg,
+    rgba(255, 4, 32, 0.5) 0%,
+    rgba(189, 39, 56, 0.5) 100%
+  );
+
+  --linear-gradient-3: linear-gradient(
+    90deg,
+    rgba(189, 39, 56, 0.35) 0%,
+    rgba(255, 6, 35, 0.12) 100%
+  );
+
+  --linear-gradient-4: linear-gradient(
+    99deg,
+    rgba(189, 39, 56, 0.2) 5.63%,
+    rgba(255, 4, 32, 0.2) 46.14%
+  );
+  --linear-gradient-5: linear-gradient(180deg, #ff0420 0%, #bd2738 100%);
+  --scrollbar-width: 16px;
+  --scrollbar-track-color: var(--background-app);
+  --scrollbar-thumb-color: var(--box-color);
+  --scrollbar-thumb-hover-color: var(--primary-color);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -18,10 +71,60 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: var(--background-app);
+
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.2) 58.85%
+  );
+}
+body::-webkit-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb-color) var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb-color);
+  border-radius: var(--scrollbar-width);
+  border: 3px solid var(--scrollbar-track-color);
+}
+
+body::-webkit-scrollbar-thumb:hover {
+  background-color: var(--scrollbar-thumb-hover-color);
+}
+@layer utilities {
+  .section-min-height {
+    min-height: 100vh;
+  }
+  .number-phase {
+    background: linear-gradient(180deg, #ff0420 0%, rgba(255, 4, 32, 0) 77.6%);
+    background-clip: te;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .phase-card:nth-last-of-type(1) .arrow {
+    display: none;
+  }
+  .text-gradient {
+    background: linear-gradient(0deg, #bd2738, #bd2738 100%, #ff0420 0%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .wave {
+    height: auto !important;
+  }
+  .wave-2 {
+    z-index: 2;
+    opacity: 0.5;
+  }
 }
