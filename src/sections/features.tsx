@@ -40,7 +40,7 @@ export const FeaturesSection = () => {
       <Cubes />
 
       <Container className={"relative z-10 "}>
-        <div className={"grid grid-cols-2 gap-5"}>
+        <div className={"grid grid-cols-2 gap-5 max-lg:grid-cols-1"}>
           <Box className="overflow-hidden col-span-1 row-start-1 row-span-2  flex flex-col gap-2">
             <div className="-mx-[46px] -mt-[41px] relative overflow-hidden">
               <Image
