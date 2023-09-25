@@ -13,7 +13,7 @@ export const Curves: FC = () => {
         draggable={false}
         objectPosition="center center"
         height={738}
-        className={`absolute top-1/2 left-0 -translate-y-1/2 transition-transform  mix-blend-lighten ease-in-out duration-400  -translate-x-3/4 select-none w-[738px] h-auto origin-center ${
+        className={`absolute top-1/2 left-0 -translate-y-1/2 transition-transform  mix-blend-lighten ease-in-out duration-800  -translate-x-3/4 select-none w-[738px] h-auto origin-center ${
           inView ? "rotate-[169.43deg]" : "rotate-0"
         } `}
       />
@@ -24,7 +24,7 @@ export const Curves: FC = () => {
         draggable={false}
         objectPosition="center center"
         height={738}
-        className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-3/4 ease-in-out duration-400 transition-transform h-auto  select-none w-[738px] origin-center mix-blend-lighten ${
+        className={`absolute top-1/2 -translate-y-1/2 right-0 translate-x-3/4 ease-in-out duration-800 transition-transform h-auto  select-none w-[738px] origin-center mix-blend-lighten ${
           inView ? "rotate-[-48.04deg]" : "rotate-0"
         }`}
       />
