@@ -13,7 +13,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center justify-between gap-4 bg-app">
       <Header />
       <CurveHeader />
-      <div className="flex flex-col overflow-x-hidden w-full bg-app">
+      <div className="flex flex-col overflow-x-hidden w-full bg-app gap-4 min-h-screen">
         <HeroSection />
         <Banner />
         <FeaturesSection />

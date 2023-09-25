@@ -27,7 +27,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 
 export const Footer: FC = () => {
   return (
-    <footer className="flex gap-2 w-full py-11 bg-gradient-app">
+    <footer className="flex gap-2 w-full py-11 bg-gradient-app mt-auto">
       <Container className="flex flex-col gap-2">
         <div className="flex gap-2 justify-between flex-wrap">
           <div className="flex flex-col gap-2">
