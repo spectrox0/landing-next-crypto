@@ -1,3 +1,4 @@
+"use client";
 import { Icon } from "@/types/common";
 import Image, { ImageProps } from "next/image";
 import { FC } from "react";

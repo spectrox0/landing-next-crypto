@@ -11,10 +11,12 @@ import { HamburgerMenu } from "./HamburgerMenu";
 import { TradeIcon } from "./icons/TradeIcon";
 import { CurveHeader } from "./CurveHeader";
 
+const arraySocialIcon = ["x", "discord", "book", "circle"];
 export const Header: FC = () => {
   const [transparent, setTransparent] = useState<boolean>(true);
   useEffect(() => {
     const handleScroll = () => setTransparent(!window.scrollY);
+    setTransparent(!window.scrollY);
     window.addEventListener("scroll", handleScroll);
   }, []);
 
@@ -47,11 +49,9 @@ export const Header: FC = () => {
               <NavItems text="whitepaper" href="#whitepaper" />
               <NavItems text="tokenomics" href="#tokenomics" />
             </div>
-            {(["x", "discord", "book", "circle"] as SocialIcons[]).map(
-              (item) => (
-                <SocialBtn key={item} icon={item} />
-              )
-            )}
+            {(arraySocialIcon as SocialIcons[]).map((item) => (
+              <SocialBtn key={item} icon={item} />
+            ))}
             <div className="flex gap-3">
               <OutlinedBtn>
                 <RocketIcon />

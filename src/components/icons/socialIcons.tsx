@@ -1,6 +1,11 @@
-import { BookIcon } from "./BookIcon";
-import { CircleIcon } from "./CirclesIcon";
-import { DiscordIcon } from "./DiscordIcon";
-import { XIcon } from "./XIcon";
+import { BookIcon, BookIconImage } from "./BookIcon";
+import { CircleIcon, CircleIconImage } from "./CirclesIcon";
+import { DiscordIcon, DiscordIconImage } from "./DiscordIcon";
+import { XIcon, XIconImage } from "./XIcon";
 
-export const socialIcons = [BookIcon, CircleIcon, DiscordIcon, XIcon];
+export const socialIcons = [
+  BookIconImage,
+  CircleIconImage,
+  DiscordIconImage,
+  XIconImage,
+];
