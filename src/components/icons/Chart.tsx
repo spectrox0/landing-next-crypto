@@ -10,7 +10,7 @@ export const ChartIcon: Icon = ({ width = 65, height = 65, ...props }) => {
       {...props}
     >
       <path
-        stroke="url(#a)"
+        stroke="url(#chart)"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={3}
@@ -18,7 +18,7 @@ export const ChartIcon: Icon = ({ width = 65, height = 65, ...props }) => {
       />
       <defs>
         <linearGradient
-          id="a"
+          id="chart"
           x1={32.5}
           x2={32.5}
           y1={10.833}

@@ -19,8 +19,8 @@ type Props = React.ButtonHTMLAttributes<HTMLButtonElement> & {
 
 export type SocialIcons = "x" | "discord" | "circle" | "book";
 const icons: Record<SocialIcons, (typeof socialIcons)[number]> = {
-  ["x"]: XIconImage,
-  ["discord"]: DiscordIconImage,
+  ["x"]: XIcon,
+  ["discord"]: DiscordIcon,
   ["circle"]: CircleIconImage,
   ["book"]: BookIconImage,
 };
