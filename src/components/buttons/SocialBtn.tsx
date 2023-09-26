@@ -21,8 +21,8 @@ export type SocialIcons = "x" | "discord" | "circle" | "book";
 const icons: Record<SocialIcons, (typeof socialIcons)[number]> = {
   ["x"]: XIcon,
   ["discord"]: DiscordIcon,
-  ["circle"]: CircleIconImage,
-  ["book"]: BookIconImage,
+  ["circle"]: CircleIcon,
+  ["book"]: BookIcon,
 };
 
 export const SocialBtn: FC<Props> = ({ icon, className, ...rest }) => {

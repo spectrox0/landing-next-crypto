@@ -1,4 +1,10 @@
 import type { Config } from "tailwindcss";
+// eslint-disable-next-line import/no-extraneous-dependencies, global-require
+const settingsScreens = require("./tailwind.settings.screens");
+
+// eslint-disable-next-line import/no-extraneous-dependencies, global-require , no-var-requires
+const settingsFontSizes = require("./tailwind.settings.fontSizes");
+
 // the color palette is defined in src/styles/colors.css
 const config: Config = {
   content: [
@@ -8,6 +14,8 @@ const config: Config = {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    screens: settingsScreens,
+    fontSize: settingsFontSizes,
     extend: {
       colors: {
         primary: "var(--primary-color)",
