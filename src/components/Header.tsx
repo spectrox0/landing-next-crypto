@@ -45,11 +45,11 @@ export const Header: FC = () => {
           </div>
           <div className="items-center gap-6 hidden xl:flex">
             <div className="flex items-center gap-6">
-              <NavItems text="home" href="#home" />
-              <NavItems text="whitepaper" href="#whitepaper" />
-              <NavItems text="tokenomics" href="#tokenomics" />
+              <NavItems text="home" href="/" />
+              <NavItems text="whitepaper" href="/tge-completed" />
+              <NavItems text="tokenomics" href="/tge-completed" />
             </div>
-            {(arraySocialIcon as SocialIcons[]).map((item) => (
+            {(arraySocialIcon as SocialIcons[]).map(item => (
               <SocialBtn key={item} icon={item} />
             ))}
             <div className="flex gap-3">

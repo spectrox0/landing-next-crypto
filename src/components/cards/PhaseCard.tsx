@@ -2,17 +2,23 @@ import { FC } from "react";
 import { CubeIcon } from "@/components/icons/CubeIcon";
 import { GroupIcon } from "../icons/GroupIcon";
 import { OutlinedBtn } from "../buttons/OutlinedBtn";
-interface Props {
-  title: string;
-  description: string;
-  number: string;
-  status: string;
+import { formatDate } from "@/utils/date";
+import { LoadingSpinner } from "../SpinnerLoading";
+import { Phase, Status } from "@/utils/data";
+import { BtnProps } from "@/types/button";
+interface Props extends Phase {
+  btnText?: string;
+  btnProps?: Omit<BtnProps, "children">;
 }
+
 export const PhaseCard: FC<Props> = ({
   title,
   description,
   number,
   status,
+  btnText = "Coming Soon",
+  statusDescription,
+  btnProps,
 }) => {
   return (
     <div className="h-full relative phase-card p-[2px]">
@@ -39,20 +45,31 @@ export const PhaseCard: FC<Props> = ({
           <p className="text-white text-sm font-normal whitespace-pre-wrap ">
             {description}
           </p>
-          <OutlinedBtn className="self-center mt-auto" disabled>
-            Coming Soon
+          <OutlinedBtn className="self-center mt-auto" {...btnProps}>
+            {btnText}
           </OutlinedBtn>
         </div>
         <footer className="flex gap-2 flex-wrap items-center justify-center  min-h-[133px] w-full bg-bg-1 rounded-b-xl">
           <div className="flex items-center gap-3">
-            <GroupIcon className="group-hover:fill-[#E22339]" />
+            {status === "onGoing" ? (
+              <LoadingSpinner color="yellow" />
+            ) : (
+              <GroupIcon className="group-hover:fill-[#E22339]" />
+            )}
             <div className="flex flex-col gap-[1px]">
-              <span className="text-white line-clamp-1  opacity-50 font-semibold  text-xs">
-                Status
-              </span>
+              {!statusDescription ? (
+                <span className="text-white line-clamp-1  opacity-50 font-semibold  text-xs">
+                  Status
+                </span>
+              ) : null}
               <span className="text-white font-semibold text-xl line-clamp-1 ">
-                {status}
+                {Status[status].title}
               </span>
+              {statusDescription ? (
+                <span className="text-white line-clamp-1  opacity-50 font-semibold  text-xs">
+                  {statusDescription}
+                </span>
+              ) : null}
             </div>
           </div>
         </footer>

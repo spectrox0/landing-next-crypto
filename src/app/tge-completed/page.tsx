@@ -1,4 +1,5 @@
 import { Banner } from "@/sections/banner";
+import { LoadingSpinner } from "@/components/SpinnerLoading";
 
 export default function TGE() {
   return (

@@ -1,13 +1,16 @@
-import React, { useState, useEffect, FC } from "react";
+"use client";
+import { ColorsCircular } from "@/utils/colorsCircular";
+import React, { useState, useEffect, FC, useId, useMemo } from "react";
 
 interface Props {
   percentage?: number;
-  color?: string;
+  color?: keyof typeof ColorsCircular;
 }
 export const CircularProgress: FC<Props> = ({
   percentage = 0,
-  color = "yellow",
+  color = "grey",
 }) => {
+  const id = useId();
   const [offset, setOffset] = useState(0);
   const center = 50;
   const radius = 45;
@@ -18,20 +21,20 @@ export const CircularProgress: FC<Props> = ({
     setOffset(progressOffset);
   }, [setOffset, circumference, percentage, offset]);
 
+  const Gradient = useMemo(() => ColorsCircular[color], [color]);
+
   return (
     <svg className="circular-progress" width="100" height="100">
       <defs>
-        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" style={{ stopColor: color, stopOpacity: 1 }} />
-          <stop offset="100%" style={{ stopColor: "white", stopOpacity: 1 }} />
-        </linearGradient>
+        <Gradient id={id} />
       </defs>
 
       <circle
         className="progress-background"
-        stroke="grey"
-        strokeWidth="2"
+        stroke={`url(#gradient-${id})}`}
+        strokeWidth="10"
         fill="transparent"
+        opacity={0.3}
         r={radius}
         cx={center}
         cy={center}
@@ -39,7 +42,7 @@ export const CircularProgress: FC<Props> = ({
 
       <circle
         className="progress-bar"
-        stroke="url(#gradient)"
+        stroke={`url(#gradient-${id})`}
         strokeWidth="10"
         fill="transparent"
         r={radius}
@@ -53,5 +56,3 @@ export const CircularProgress: FC<Props> = ({
     </svg>
   );
 };
-
-export default CircularProgress;
