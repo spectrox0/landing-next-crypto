@@ -22,6 +22,9 @@ const config: Config = {
       gap: {
         "10": "3.125rem",
       },
+      boxShadow: {
+        primary: "0 0 0 2px var(--primary-color)",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

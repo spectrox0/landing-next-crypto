@@ -1,5 +1,4 @@
 import { FC } from "react";
-import { Box } from "@/components/Box";
 import { CubeIcon } from "@/components/icons/CubeIcon";
 import { GroupIcon } from "../icons/GroupIcon";
 import { OutlinedBtn } from "../buttons/OutlinedBtn";
@@ -16,13 +15,13 @@ export const PhaseCard: FC<Props> = ({
   status,
 }) => {
   return (
-    <div className="h-full relative phase-card">
-      <span className="arrow absolute w-[52px] flex justify-center h-[2px] bottom-1/3 right-[1px] translate-y-1/2 translate-x-full bg-[#4D566C]">
+    <div className="h-full relative phase-card p-[2px]">
+      <span className="arrow absolute w-[52px] z-[-1] flex justify-center h-[2px] bottom-1/3 right-[1px] translate-y-1/2 translate-x-full bg-[#4D566C]">
         <div className="rounded-full w-[6px] h-[6px] left-1/2 top-1/2 bg-inherit absolute -translate-x-1/2 -translate-y-1/2"></div>
       </span>
-      <div className="border-2 max-w-[431px] flex flex-col rounded-xl  h-full bg-transparent px-0 py-0 overflow-hidden border-transparent hover:border-primary transition-[border-color] duration-300 group">
-        <header className="bg-bg-1  pt-[23px] pb-[34px] px-[23px] bg-linear-gradient-4 relative flex flex-col gap-2  ">
-          <span className="absolute bg-clip-text top-0 left-[5px] opacity-30 text-[128px] number-phase font-medium">
+      <div className="max-w-[431px] flex flex-col z-10 rounded-xl  h-full bg-transparent px-0 py-0 border-transparent hover:shadow-primary transition-[box-shadow] duration-300 group">
+        <header className="bg-bg-1  pt-[23px] pb-[34px] px-[23px] bg-linear-gradient-4 relative flex flex-col gap-2 rounded-t-xl ">
+          <span className="absolute bg-clip-text top-0 left-[5px] opacity-30 text-[128px] number-phase font-extralight">
             {number}
           </span>
           <div className="flex justify-end ml-auto w-full">
@@ -44,7 +43,7 @@ export const PhaseCard: FC<Props> = ({
             Coming Soon
           </OutlinedBtn>
         </div>
-        <footer className="flex gap-2 flex-wrap items-center justify-center  min-h-[133px] w-full bg-bg-1">
+        <footer className="flex gap-2 flex-wrap items-center justify-center  min-h-[133px] w-full bg-bg-1 rounded-b-xl">
           <div className="flex items-center gap-3">
             <GroupIcon className="group-hover:fill-[#E22339]" />
             <div className="flex flex-col gap-[1px]">

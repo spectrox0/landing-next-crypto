@@ -73,6 +73,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background-color: var(--background-app);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 
   background-image: linear-gradient(
     180deg,

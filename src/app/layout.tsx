@@ -1,11 +1,14 @@
+import { CurveHeader } from "@/components/CurveHeader";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const fonts = Poppins({
   subsets: ["latin"],
   preload: false,
-  weight: ["400", "500", "600", "700"],
+  weight: ["200", "300", "400", "500", "600", "700"],
 });
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,7 +22,16 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fonts.className}>{children}</body>
+      <body className={fonts.className}>
+        <main className="flex min-h-screen flex-col items-center justify-between gap-4 bg-app">
+          <Header />
+          <CurveHeader />
+          <div className="flex flex-col overflow-x-hidden w-full bg-app gap-4 min-h-screen">
+            {children}
+          </div>
+          <Footer />
+        </main>
+      </body>
     </html>
   );
 }

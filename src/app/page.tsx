@@ -4,23 +4,22 @@ import { Banner } from "@/sections/banner";
 import { FeaturesSection } from "@/sections/features";
 import { AlertSection } from "@/sections/alert";
 import { HandsSection } from "@/sections/hands";
-import { Waves } from "@/components/Waves";
-import { Footer } from "@/components/Footer";
-import { CurveHeader } from "@/components/CurveHeader";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between gap-4 bg-app">
-      <Header />
-      <CurveHeader />
-      <div className="flex flex-col overflow-x-hidden w-full bg-app gap-4 min-h-screen">
-        <HeroSection />
-        <Banner />
-        <FeaturesSection />
-        <AlertSection />
-        <HandsSection />
-      </div>
-      <Footer />
-    </main>
+    <>
+      <HeroSection />
+      <Banner title={"Open Beta"} number="01" img="Cube">
+        <b className="font-semibold">
+          Copy Up to 1,500,000 xINTX tokens (1.5%) will be distributed as
+          rewards to participants in the Open Beta project phase.
+        </b>
+        Trade on the exchange and complete tasks on Zealy to earn a share of
+        airdrop rewards.
+      </Banner>
+      <FeaturesSection />
+      <AlertSection />
+      <HandsSection />
+    </>
   );
 }

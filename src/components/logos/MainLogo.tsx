@@ -1,5 +1,6 @@
 import Image, { ImageProps } from "next/image";
 import * as React from "react";
+
 export const MainLogo: React.FC<Omit<ImageProps, "alt" | "src">> = ({
   width = 181,
   height = 41,

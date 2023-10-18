@@ -1,5 +1,4 @@
 import { FC } from "react";
-
 // Container with tailwind css with common max with and margin auto
 interface Props {
   children: React.ReactNode;

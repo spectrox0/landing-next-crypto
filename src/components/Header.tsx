@@ -31,7 +31,7 @@ export const Header: FC = () => {
     <header className="flex items-center justify-between w-full sticky top-0 left-0 z-40 overflow-hidden">
       <nav
         className={
-          "flex items-center justify-between  w-full  py-[41px] border-transparent border-b-[0.5] " +
+          "flex items-center justify-between  w-full  py-[41px] border-transparent border-b-[0.5]  transition-all duration-300 ease-in-out" +
           classNameNav
         }
       >
