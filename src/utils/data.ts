@@ -6,6 +6,7 @@ import { BtnProps } from "@/types/button";
 export const Status = {
   comingSoon: { title: "Coming Soon" },
   onGoing: { title: "On Going" },
+  completed: { title: "Completed" },
   toBeAnnounced: { title: "To Be Announced" },
 } as const;
 export interface Phase {
