@@ -41,10 +41,10 @@ export const Banner: FC<Props> = ({
   const HeaderImage = useMemo(() => image[img], [img]);
   return (
     <Container className="relative z-10">
-      <div className="relative overflow-hidden pt-[120px] h-full mb-10 rounded-[15px] flex flex-col">
-        <div className="bg-box w-full overflow-visible rounded-[inherit] h-full flex-1 flex gap-2 max-md:flex-col-reverse">
+      <div className="relative overflow-hidden pt-[120px] h-full mb-10 rounded-[15px] flex flex-col ">
+        <div className="bg-box w-full overflow-visible rounded-[inherit] h-full flex-1 flex gap-2 max-md:flex-col-reverse max-md:backdrop-blur-[15px] max-md:bg-box/50">
           <HeaderImage />
-          <div className="pb-[40px] pt-[30px] pl-[10px] pr-[45px] max-md:pl-[45px] flex flex-col gap-4">
+          <div className="pb-[40px] pt-[30px] pl-[10px] pr-[45px] max-md:pl-[45px] flex flex-col gap-4 max-md:mx-auto relative max-md:self-center">
             <CTABtn className="self-end">More Details</CTABtn>
             <TitlePhase title={title} number={number} />
             <p className="text-white text-base font-normal ">{children}</p>

@@ -25,4 +25,17 @@ export const ColorsCircular = Object.freeze({
       <stop offset="1" stop-color="#B7E25B" />
     </linearGradient>
   ),
+  red: ({ id }: { id: string }) => (
+    <linearGradient
+      id={`gradient-${id}`}
+      x1="37.5"
+      y1="0"
+      x2="37.5"
+      y2="75"
+      gradientUnits="userSpaceOnUse"
+    >
+      <stop stop-color="#FF0420" />
+      <stop offset="1" stop-color="#BD2738" />
+    </linearGradient>
+  ),
 } as const);

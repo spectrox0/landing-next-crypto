@@ -1,6 +1,14 @@
 import type { Config } from "tailwindcss";
 
 // the color palette is defined in src/styles/colors.css
+function withOpacity(variableName: string) {
+  return ({ opacityValue }: { opacityValue: number }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`;
+    }
+    return `rgb(var(${variableName}))`;
+  };
+}
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -14,10 +22,12 @@ const config: Config = {
         primary: "var(--primary-color)",
         secondary: "var(--secondary-color)",
         "hamburger-menu": "var(--hamburger-menu-color)",
-        box: "var(--box-color)",
+        //@ts-ignore
+        box: withOpacity("--box-color"),
         "bg-1": "var(--bg-1)",
         app: "var(--background-app)",
         gray: "var(--gray)",
+        divider: "var(--divider)",
       },
       gap: {
         "10": "3.125rem",

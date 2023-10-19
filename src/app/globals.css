@@ -9,6 +9,7 @@
   --background-app: #17191e;
   --gray: #b0bbce;
 
+  --divider: #474f61;
   /* linear gradient of #FF0420 to #BD2738 */
   --linear-gradient-1: linear-gradient(
       0deg,
@@ -34,7 +35,7 @@
   --primary-color: #bd2738;
   --secondary-color: #ff0420;
   --hamburger-menu-color: #23262f;
-  --box-color: #232731;
+  --box-color: 35, 39, 49;
   --bg-1: #1b1e26;
 
   --linear-gradient-2: linear-gradient(

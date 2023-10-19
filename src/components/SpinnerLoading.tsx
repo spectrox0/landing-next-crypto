@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useId, useMemo } from "react";
-import { motion, useAnimation } from "framer-motion";
 import { ColorsCircular } from "@/utils/colorsCircular";
+import { motion, useAnimation } from "framer-motion";
+import React, { useEffect, useId, useMemo } from "react";
 
 interface Props {
   color?: keyof typeof ColorsCircular;
