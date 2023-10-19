@@ -54,7 +54,7 @@ const defaultData: Data[] = [
     mainText: "50% xINTX Liquid",
     footerText: "50% Vested over 12 Months",
   },
-] as const;
+];
 interface Props {
   data?: Data[];
 }

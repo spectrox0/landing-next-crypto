@@ -3,8 +3,14 @@ import { FC } from "react";
 import { Box } from "./Box";
 import { CTABtn } from "./buttons/CTABtn";
 
-interface Props {}
-export const MiniBanner: FC = () => {
+interface Props {
+  title?: string;
+  textBtn?: string;
+}
+export const MiniBanner: FC<Props> = ({
+  title = "Detailed Information",
+  textBtn = "More Details",
+}) => {
   return (
     <Box blur padding={2}>
       <div className="flex flex-wrap gap-2 max-md:flex-col-reverse">
@@ -23,10 +29,8 @@ export const MiniBanner: FC = () => {
           src="/assets/figures/figures.png"
         />
         <div className="flex flex-col gap-1 flex-1 justify-center">
-          <h3 className="text-white text-[25px] font-medium px-2">
-            Detailed Information
-          </h3>
-          <CTABtn className="self-start mr-auto">More Details</CTABtn>
+          <h3 className="text-white text-[25px] font-medium px-2">{title}</h3>
+          <CTABtn className="self-start mr-auto">{textBtn}</CTABtn>
         </div>
       </div>
     </Box>
